@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#317EFB">
+    <link rel="shortcut icon" href="assets/icon-192x192.png" type="image/x-icon">
+    <link rel="manifest" href="assets/site.webmanifest">
+    <meta name="Description" content="weather forecast app" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <!-- adding leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <title>Aman's Weather Dashboard</title>
+    <script src="assets/js/main.js" defer></script>;
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    <div class="container">
+        <main>
+
+            <header>
+
+                <h1>Weather Dashboard(Aman)</h1>
+
+            </header>
+            <section id="section">
+                <div class="row" id="bigPan">
+                    <div class="col-12 col-md-3">
+                        <div class="wrapper">
+                            <div id="formPanel">
+                                <form id="city-form">
+                                    <h5>Search for a city:</h5>
+                                    <input type="text" id="city-input">
+
+                                    <!-- Button triggers new cities to be added -->
+                                    <input id="add-city" type="submit" value=" " src="/assets/search-icon.png">
+                                </form>
+                                <div class="cities-group"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-9" id="bigPan3" style="opacity: 0;">
+                        <figure id="currentPan">
+                        <!-- information on current weather goes here -->
+                        </figure>
+                        <h4 style="color: white; text-shadow: royalblue;">5-Day Forcast</h4>
+                        <figure id="forPan">
+                          <!-- forcast information goes here -->
+                        </figure>
+
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+</body>
+
+</html>
